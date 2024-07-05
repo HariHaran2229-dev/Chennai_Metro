@@ -440,50 +440,6 @@ import java.io.*;
 			return arr;
 		}
 		
-		public static void Create_Metro_Map(Graph_M g)
-		{
-			g.addVertex("Noida Sector 62~B");
-			g.addVertex("Botanical Garden~B");
-			g.addVertex("Yamuna Bank~B");
-			g.addVertex("Rajiv Chowk~BY");
-			g.addVertex("Vaishali~B");
-			g.addVertex("Moti Nagar~B");
-			g.addVertex("Janak Puri West~BO");
-			g.addVertex("Dwarka Sector 21~B");
-			g.addVertex("Huda City Center~Y");
-			g.addVertex("Saket~Y");
-			g.addVertex("Vishwavidyalaya~Y");
-			g.addVertex("Chandni Chowk~Y");
-			g.addVertex("New Delhi~YO");
-			g.addVertex("AIIMS~Y");
-			g.addVertex("Shivaji Stadium~O");
-			g.addVertex("DDS Campus~O");
-			g.addVertex("IGI Airport~O");
-			g.addVertex("Rajouri Garden~BP");
-			g.addVertex("Netaji Subhash Place~PR");
-			g.addVertex("Punjabi Bagh West~P");
-			
-			g.addEdge("Noida Sector 62~B", "Botanical Garden~B", 8);
-			g.addEdge("Botanical Garden~B", "Yamuna Bank~B", 10);
-			g.addEdge("Yamuna Bank~B", "Vaishali~B", 8);
-			g.addEdge("Yamuna Bank~B", "Rajiv Chowk~BY", 6);
-			g.addEdge("Rajiv Chowk~BY", "Moti Nagar~B", 9);
-			g.addEdge("Moti Nagar~B", "Janak Puri West~BO", 7);
-			g.addEdge("Janak Puri West~BO", "Dwarka Sector 21~B", 6);
-			g.addEdge("Huda City Center~Y", "Saket~Y", 15);
-			g.addEdge("Saket~Y", "AIIMS~Y", 6);
-			g.addEdge("AIIMS~Y", "Rajiv Chowk~BY", 7);
-			g.addEdge("Rajiv Chowk~BY", "New Delhi~YO", 1);
-			g.addEdge("New Delhi~YO", "Chandni Chowk~Y", 2);
-			g.addEdge("Chandni Chowk~Y", "Vishwavidyalaya~Y", 5);
-			g.addEdge("New Delhi~YO", "Shivaji Stadium~O", 2);
-			g.addEdge("Shivaji Stadium~O", "DDS Campus~O", 7);
-			g.addEdge("DDS Campus~O", "IGI Airport~O", 8);
-			g.addEdge("Moti Nagar~B", "Rajouri Garden~BP", 2);
-			g.addEdge("Punjabi Bagh West~P", "Rajouri Garden~BP", 2);
-			g.addEdge("Punjabi Bagh West~P", "Netaji Subhash Place~PR", 3);
-		}
-		
 		public static String[] printCodelist()
 		{
 			System.out.println("List of station along with their codes:\n");
