@@ -141,44 +141,4 @@ import java.io.*;
 			return false;
 		}
 		
-		
-		
-		
-		public ArrayList<String> get_Interchanges(String str)
-		{
-			ArrayList<String> arr = new ArrayList<>();
-			String res[] = str.split("  ");
-			arr.add(res[0]);
-			int count = 0;
-			for(int i=1;i<res.length-1;i++)
-			{
-				int index = res[i].indexOf('~');
-				String s = res[i].substring(index+1);
-				
-				if(s.length()==2)
-				{
-					String prev = res[i-1].substring(res[i-1].indexOf('~')+1);
-					String next = res[i+1].substring(res[i+1].indexOf('~')+1);
-					
-					if(prev.equals(next)) 
-					{
-						arr.add(res[i]);
-					}
-					else
-					{
-						arr.add(res[i]+" ==> "+res[i+1]);
-						i++;
-						count++;
-					}
-				}
-				else
-				{
-					arr.add(res[i]);
-				}
-			}
-			arr.add(Integer.toString(count));
-			arr.add(res[res.length-1]);
-			return arr;
-		}
-		
 	}
