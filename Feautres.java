@@ -41,10 +41,29 @@ public class Dijkstra{
         Dijkstra path=shortestPath(a,b,vtces);
         String solution_path=new String();
         solution_path+=path.stations.get(0);
-        for(int i=1;i<path.stations.size();i++){
-            solution_path+="->"
-            solution_path+=path.stations.get(i);    
-        }
+		List<String> res=path.stations;
+		int count = 0;
+		for(int i=1;i<res.size()-1;i++){
+			int index = res.get(i).indexOf('~');
+			String s = res.get(i).substring(index+1);
+			if(s.length()==2){
+				String prev = res.get(i-1).substring(res.get(i-1).indexOf('~')+1);
+				String next = res.get(i+1).substring(res.get(i+1).indexOf('~')+1);
+					
+				if(prev.equals(next)){
+					solution_path+="->";
+                    solution_path+= res.get(i);
+				}
+				else{
+					solution_path+=" ==> ";
+					solution_path+=eres.get(i);
+				}
+			}
+			else{
+				solution_path+="->";
+                solution_path+= res.get(i);
+			}
+		}
         if(n==0) return solution_path;
         else if(n==1){
             int time=path.stations.size()-1;
