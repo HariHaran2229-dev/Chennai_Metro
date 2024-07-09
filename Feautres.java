@@ -14,8 +14,6 @@ public class Dijkstra{
         Queue<Dijkstra> q=new LinkedList<>();
         List<String> cur=new ArrayList<>();
         cur.add(src);
-        int[] quickPath=new int[vtces.size()];
-        Arrays.fill(quickPath,Integer.MAX_VALUE);
         q.add(new Dijkstra(cur));
         Set<String> visited=new HashSet<>();
         visited.add(src);
