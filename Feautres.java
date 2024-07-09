@@ -7,7 +7,7 @@ public class Dijkstra{
     public Dijkstra(List<String> a){
         this.stations=new ArrayList<>(a);
     }
-    public dDjkstra(){
+    public Djkstra(){
             
     }
     private Dijkstra shortestPath(String src,String des,Graph vtces){
